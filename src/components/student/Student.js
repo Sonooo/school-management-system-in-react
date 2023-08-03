@@ -8,14 +8,32 @@ import Result from './Result';
 
 const Student = () => {
   return (
-    <div>
+    <div className='container'>
       <h2 className='text-center'>Student Management</h2>
-      <StudentForm />
-      <StudentList />
-      <Teacher />
-      <TeacherList />
-      <Entermarks />
-      <Result />
+  <div className="row">
+
+        <div className="col-md-6"><StudentForm />
+        </div>
+        <div className="col-md-6"><StudentList />
+        </div>
+
+<hr />
+      
+        <div className="col-md-6">      <Teacher />
+
+        </div>
+        <div className="col-md-6"><TeacherList />
+        </div>
+<hr />
+        <div className="col-md-6">      <Entermarks />
+
+        </div>
+        <div className="col-md-6"><Result />
+        </div>
+  </div>
+
+  <hr />
+      
     </div>
   );
 };

@@ -45,7 +45,7 @@ const Teacher = () => {
         )
       }
 
-      <form onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit} className='border border-secondary' >
 
         <div className='form-outline mb-4 col row '>
         <label className='form-label'>
@@ -56,6 +56,7 @@ const Teacher = () => {
             value={teacherData.name}
             onChange={handleChange}
             className='form-control'
+            required
           />
 </label>
         </div>
@@ -69,6 +70,7 @@ const Teacher = () => {
             value={teacherData.subject}
             onChange={handleChange}
             className='form-control'
+            required
           />
 </label>
         </div>
@@ -82,6 +84,7 @@ const Teacher = () => {
             value={teacherData.email}
             onChange={handleChange}
             className='form-control'
+            required
           />
 </label>
         </div>

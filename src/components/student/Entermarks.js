@@ -88,8 +88,9 @@ const Entermarks = (onFormsubmit) => {
           </div>
         )
       }
-      <form onSubmit={handleSubmit}>
-        <div className="form-outline mb-4 col row">
+      <form  onSubmit={handleSubmit} className='border border-secondary' >
+        <div className="row">
+        <div className="form-outline mb-4 col-md-6">
           <label className="form-label">
             Name:
             <input
@@ -102,7 +103,7 @@ const Entermarks = (onFormsubmit) => {
           </label>
         </div>
 
-        <div className="form-outline mb-4 col row">
+        <div className="form-outline mb-4 col-md-6">
           <label className="form-label">
             Roll Number:
             <input
@@ -114,7 +115,7 @@ const Entermarks = (onFormsubmit) => {
             />
           </label>
         </div>
-        <div className="form-outline mb-4 col row">
+        <div className="form-outline mb-4 col-md-6">
           <label className="form-label">
             Grade:
             <input
@@ -127,7 +128,7 @@ const Entermarks = (onFormsubmit) => {
           </label>
         </div>
 
-        <div className="form-outline mb-4 col row">
+        <div className="form-outline mb-4 col-md-6">
           <label className="form-label">
           standard:
             <input
@@ -140,7 +141,7 @@ const Entermarks = (onFormsubmit) => {
           </label>
         </div>
 
-        <div className="form-outline mb-4 col row">
+        <div className="form-outline mb-4 col-md-6">
           <label className="form-label">
             Division:
             <input
@@ -153,11 +154,13 @@ const Entermarks = (onFormsubmit) => {
           </label>
         </div>
 
+        </div>
     <p>Marks</p>
 
+    <div className="row">
     {
         resultData.marks.map((marks,index)=>(
-            <div className="form-outline mb-4 col row">
+            <div className="form-outline mb-4 col-md-4">
             <label className="form-label">
                 {marks.subject}
               <input
@@ -171,6 +174,8 @@ const Entermarks = (onFormsubmit) => {
           </div> 
         ))
     }
+
+    </div>
         
         <br />
         <button className="btn btn-block btn-success" type="submit">

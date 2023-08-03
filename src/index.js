@@ -11,6 +11,7 @@ import TeachersAddNview from './Views/TeachersAddNview';
 import Homepage from './components/student/Homepage';
 import Entermarks from './components/student/Entermarks';
 import Student from './components/student/Student';
+import ShowAllData from './Views/ShowAllData';
 // import Student from './components/student/Student';
 
 
@@ -34,6 +35,9 @@ root.render(
   <Route path="showaddresult"  element={<showAddResult />}/>
   <Route path="addresults"  element={<Entermarks />}/>
   <Route path="all"  element={<Student />}/>
+
+  <Route path="Showall"  element={<ShowAllData />}/>
+
 
 
 </Routes>

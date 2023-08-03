@@ -19,6 +19,7 @@ export default function ShowAllData() {
 
         <TeacherList/>
 
+<button className="btn btn-lg btn-block btn-success" onClick={() => window.print()}>Print All Data</button>
     </div>
   )
 }
