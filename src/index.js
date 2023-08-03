@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter,Route, Routes } from 'react-router-dom';
 import StudentForm from './components/student/StudentForm';
@@ -10,12 +10,16 @@ import StudentAddnView from './Views/StudentAddnView';
 import TeachersAddNview from './Views/TeachersAddNview';
 import Homepage from './components/student/Homepage';
 import Entermarks from './components/student/Entermarks';
+import Student from './components/student/Student';
 // import Student from './components/student/Student';
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
@@ -29,6 +33,8 @@ root.render(
   <Route path="teachersAddNview"  element={<TeachersAddNview />}/>
   <Route path="showaddresult"  element={<showAddResult />}/>
   <Route path="addresults"  element={<Entermarks />}/>
+  <Route path="all"  element={<Student />}/>
+
 
 </Routes>
     </BrowserRouter>

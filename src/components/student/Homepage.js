@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 
 
 export default function Homepage() {
+  
   return (
     <div className="container mb-4 ">
       <h2 className="text-center"> School Management System</h2>
@@ -19,7 +20,7 @@ export default function Homepage() {
 
         
           <div className="col-md-3  mb-4">
-          <Link to="/studentsAddnView" >
+          <Link to="/showstudent" >
 
             <div className="card">
               <img src={student} class="card-img-top" alt="..." />
@@ -32,7 +33,7 @@ export default function Homepage() {
           </div>
 
           <div className="col-md-3  mb-4">
-          <Link to="/teachersAddNview">
+          <Link to="/showteacher">
 
             <div className="card">
               <img src={teacher} class="card-img-top" alt="..." />
@@ -58,7 +59,7 @@ export default function Homepage() {
           </div>
 
           <div className="col-md-3  mb-4">
-          <Link to="/showresult">
+          <Link to="/addstudent">
             <div className="card">
               <img src={edit} class="card-img-top" alt="..." />
               <div className="card-body">
@@ -71,7 +72,7 @@ export default function Homepage() {
           </div>
 
           <div className="col-md-3  mb-4">
-          <Link to="/addstudent">
+          <Link to="/addresults">
             <div className="card">
               <img src={edit} class="card-img-top" alt="..." />
               <div className="card-body">
@@ -96,6 +97,31 @@ export default function Homepage() {
             </Link>
           </div>
 
+          <div className="col-md-3  mb-4">
+          <Link to="/all">
+            <div className="card">
+              <img src={result} class="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="btn btn-lg btn-block btn-success">
+                  Add and Show all Info
+                </h5>
+              </div>
+            </div>
+            </Link>
+          </div>
+
+          <div className="col-md-3  mb-4">
+          <Link to="/showresult">
+            <div className="card">
+              <img src={result} class="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="btn btn-lg btn-block btn-success">
+                  Result Info
+                </h5>
+              </div>
+            </div>
+            </Link>
+          </div>
 
 
       </div>

@@ -7,18 +7,22 @@ const StudentForm = () => {
     grade: '',
   });
 
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setStudentData({ ...studentData, [name]: value });
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     // Add your logic here to save the student data to local storage or IndexedDB
  const students = JSON.parse(localStorage.getItem('students') || '[]')
  students.push(studentData)
     console.log('Student Data:', studentData);
     localStorage.setItem('students', JSON.stringify(students));
+
+    setShowSuccess(true)
     // Clear the form after submission
     setStudentData({
       name: '',
@@ -33,6 +37,13 @@ const StudentForm = () => {
   return (
     <div className='text-center container' style={{textAlign:"center", margin:"auto", padding:"10px"}}>
       <h3 className='text-center'>Add Student</h3>
+      {
+        showSuccess && (
+          <div className='alert alert-success' role='alert'>
+            Data Added Successfully
+          </div>
+        )
+      }
       <form  onSubmit={handleSubmit} >
         <div className='form-outline mb-4 col row'>
         <label className='form-label'> 

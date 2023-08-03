@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Entermarks = () => {
+const Entermarks = (onFormsubmit) => {
   const [resultData, setresultData] = useState({
     name: '',
     rollNumber: '',
@@ -27,6 +27,10 @@ const Entermarks = () => {
     ]
   });
 
+
+  const [showSuccess, setShowSuccess] = useState(false);
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setresultData({ ...resultData, [name]: value });
@@ -40,13 +44,16 @@ const Entermarks = () => {
     };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
+    onFormsubmit();
     // Add your logic here to save the result data to local storage or IndexedDB
  const results = JSON.parse(localStorage.getItem('results') || '[]')
  results.push(resultData)
     console.log('result Data:', resultData);
     localStorage.setItem('results', JSON.stringify(results));
     // Clear the form after submission
+    setShowSuccess(true)
+
     setresultData({
         name: '',
         rollNumber: '',
@@ -74,6 +81,13 @@ const Entermarks = () => {
       style={{ textAlign: "center", margin: "auto", padding: "10px" }}
     >
       <h3 className="text-center">Add result</h3>
+      {
+        showSuccess && (
+          <div className='alert alert-success' role='alert'>
+            Data Submitted Successfully
+          </div>
+        )
+      }
       <form onSubmit={handleSubmit}>
         <div className="form-outline mb-4 col row">
           <label className="form-label">

@@ -7,18 +7,22 @@ const Teacher = () => {
     email: '',
   });
 
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setTeacherData({ ...teacherData, [name]: value });
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     // Add your logic here to save the teacher data to local storage or IndexedDB
     const teachers = JSON.parse(localStorage.getItem('teachers') || '[]')
  teachers.push(teacherData)
     localStorage.setItem('teachers', JSON.stringify(teachers));
     console.log('Teacher Data:', teacherData);
+    setShowSuccess(true)
+
     // Clear the form after submission
     setTeacherData({
       name: '',
@@ -33,6 +37,14 @@ const Teacher = () => {
   return (
     <div className='text-center container'>
       <h2>Teacher Management</h2>
+      {
+        showSuccess && (
+          <div className='alert alert-success' role='alert'>
+            Data Submitted Successfully
+          </div>
+        )
+      }
+
       <form onSubmit={handleSubmit}>
 
         <div className='form-outline mb-4 col row '>
