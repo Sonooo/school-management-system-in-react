@@ -12,6 +12,7 @@ import Homepage from './components/student/Homepage';
 import Entermarks from './components/student/Entermarks';
 import Student from './components/student/Student';
 import ShowAllData from './Views/ShowAllData';
+import Navbar from './components/Microcomponents/Navbar';
 // import Student from './components/student/Student';
 
 
@@ -22,6 +23,7 @@ root.render(
 
 
   <React.StrictMode>
+        <Navbar />
     <BrowserRouter>
     <Routes>
   <Route path="/"  element={<Homepage />}/>
