@@ -1,18 +1,19 @@
 import React  from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter,Route, Routes } from 'react-router-dom';
-import StudentForm from './components/student/StudentForm';
-import Teacher from './components/student/Teacher';
-import StudentList from './components/student/StudentList';
-import TeacherList from './components/student/TeacherList';
-import Result from './components/student/Result';
-import StudentAddnView from './Views/StudentAddnView';
-import TeachersAddNview from './Views/TeachersAddNview';
-import Homepage from './components/student/Homepage';
-import Entermarks from './components/student/Entermarks';
-import Student from './components/student/Student';
-import ShowAllData from './Views/ShowAllData';
-import Navbar from './components/Microcomponents/Navbar';
+import App from './App';
+// import { BrowserRouter,Route, Routes } from 'react-router-dom';
+// import StudentForm from './components/student/StudentForm';
+// import Teacher from './components/student/Teacher';
+// import StudentList from './components/student/StudentList';
+// import TeacherList from './components/student/TeacherList';
+// import Result from './components/student/Result';
+// import StudentAddnView from './Views/StudentAddnView';
+// import TeachersAddNview from './Views/TeachersAddNview';
+// import Homepage from './components/student/Homepage';
+// import Entermarks from './components/student/Entermarks';
+// import Student from './components/student/Student';
+// import ShowAllData from './Views/ShowAllData';
+// import Navbar from './components/Microcomponents/Navbar';
 // import Student from './components/student/Student';
 
 
@@ -23,7 +24,7 @@ root.render(
 
 
   <React.StrictMode>
-        <Navbar />
+        {/* <Navbar />
     <BrowserRouter>
     <Routes>
   <Route path="/"  element={<Homepage />}/>
@@ -43,6 +44,8 @@ root.render(
 
 
 </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
+
+    <App />
   </React.StrictMode>
 );

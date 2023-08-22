@@ -3,3 +3,23 @@
    max-height: 70px;
 
 }
+
+/* Global styling */
+body {
+   font-family: 'Arial', sans-serif;
+ }
+ 
+ /* Specific styling for Dashboard */
+ .dashboard {
+   min-height: 100vh;
+ }
+ 
+ .sidebar {
+   flex: 1;
+ }
+ 
+ .content {
+   flex: 3;
+   background-color: #f4f4f4;
+ }
+ 
