@@ -13,13 +13,12 @@ export default function Homepage() {
   
   return (
     <div className="container mb-4 ">
-      <h2 className="text-center"> School Management System</h2>
       <br />
 
       <div className="row">
 
         
-          <div className="col-md-3  mb-4">
+          <div className="col-md-4  mb-4">
           <Link to="/showstudent" >
 
             <div className="card">
@@ -32,7 +31,7 @@ export default function Homepage() {
 
           </div>
 
-          <div className="col-md-3  mb-4">
+          <div className="col-md-4  mb-4">
           <Link to="/showteacher">
 
             <div className="card">
@@ -45,7 +44,7 @@ export default function Homepage() {
 
           </div>
 
-          <div className="col-md-3  mb-4">
+          <div className="col-md-4  mb-4">
           <Link to="/showresult">
             <div className="card">
               <img src={result} class="card-img-top" alt="..." />
@@ -58,7 +57,7 @@ export default function Homepage() {
             </Link>
           </div>
 
-          <div className="col-md-3  mb-4">
+          <div className="col-md-4  mb-4">
           <Link to="/addstudent">
             <div className="card">
               <img src={edit} class="card-img-top" alt="..." />
@@ -71,7 +70,7 @@ export default function Homepage() {
             </Link>
           </div>
 
-          <div className="col-md-3  mb-4">
+          <div className="col-md-4  mb-4">
           <Link to="/addresults">
             <div className="card">
               <img src={edit} class="card-img-top" alt="..." />
@@ -84,7 +83,7 @@ export default function Homepage() {
             </Link>
           </div>
 
-          <div className="col-md-3  mb-4">
+          <div className="col-md-4  mb-4">
           <Link to="/addteacher">
             <div className="card">
               <img src={edit} class="card-img-top" alt="..." />
@@ -97,7 +96,7 @@ export default function Homepage() {
             </Link>
           </div>
 
-          <div className="col-md-3  mb-4">
+          {/* <div className="col-md-4  mb-4">
           <Link to="/all">
             <div className="card">
               <img src={result} class="card-img-top" alt="..." />
@@ -108,9 +107,9 @@ export default function Homepage() {
               </div>
             </div>
             </Link>
-          </div>
+          </div> */}
 
-          <div className="col-md-3  mb-4">
+          <div className="col-md-4  mb-4">
           <Link to="/Showall">
             <div className="card">
               <img src={result} class="card-img-top" alt="..." />

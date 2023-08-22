@@ -1,5 +1,4 @@
 import React from 'react';
-import Sidebar from './Sidebar';
 import { Link, Outlet } from 'react-router-dom'; // Import Outlet
 
 import '../../CSS/style.css'
