@@ -8,7 +8,7 @@ const TeacherList = (reloadData) => {
 
   useEffect(() => {
     // Fetch the student data from local storage or IndexedDB and update the state
-    const storedtechersData = JSON.parse( localStorage.getItem('teachers') || '[]' );
+    const storedtechersData = JSON.parse( localStorage.getItem('teacher') || '[]' );
 
     // For this example, we'll use a dummy data array
     const dummyData = [

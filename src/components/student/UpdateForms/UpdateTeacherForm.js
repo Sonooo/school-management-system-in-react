@@ -23,21 +23,21 @@ const UpdateTeacherForm = ({teacher,onUpdate}) => {
           <input
             type="text"
             name="name"
-            value={teacher.name}
+            value={updatedTeacher.name}
             onChange={handleChange}
           />
           <label>Subject:</label>
           <input
             type="text"
             name="subject"
-            value={teacher.subject}
+            value={updatedTeacher.subject}
             onChange={handleChange}
           />
           <label>Email:</label>
           <input
             type="email"
             name="email"
-            value={teacher.email}
+            value={updatedTeacher.email}
             onChange={handleChange}
           />
           {/* Add more input fields as needed */}
