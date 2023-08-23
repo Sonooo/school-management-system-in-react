@@ -5,4 +5,30 @@
 }
 
 
+ /* Custom styles for the header */
+.navbar {
+   background-color: #fff;
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .navbar-brand {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #333;
+ }
+ 
+ .navbar-toggler {
+   border: none;
+ }
+ 
+ /* Profile avatar */
+ .nav-item .fa-user-circle {
+   color: #333;
+   transition: color 0.3s;
+   cursor: pointer;
+ }
+ 
+ .nav-item .fa-user-circle:hover {
+   color: #007bff;
+ }
  
